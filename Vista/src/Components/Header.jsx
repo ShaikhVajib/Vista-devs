@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-import React from 'react'
-  
+
 const Header = () => {
-=======
-import React from 'react';
+
+  import React from 'react';
 import HeaderCss from './Header.module.css';
 import PrimaryButton from './PrimaryButton';
 import logo from '../assets/logo.svg';
 
 function Header() {
->>>>>>> 05f941f9987059899d89f2382f220b80cc34475f
+  
   return (
     <>    
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
