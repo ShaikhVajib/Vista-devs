@@ -1,0 +1,5 @@
+.body{
+    background-color: white;
+    padding: 50px;
+    @apply text-4xl p-10 justify-center flex
+}
