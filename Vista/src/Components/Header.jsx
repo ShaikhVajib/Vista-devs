@@ -1,7 +1,6 @@
-import React from 'react'
-import '../../output.css'
+import React from 'react';
 
-const Header = () => {
+function Header() {
   return (
     <div>
       <h1>Header</h1>
