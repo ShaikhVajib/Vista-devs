@@ -7,7 +7,7 @@ function Header() {
   
   return (
     <>    
-      <nav className=" border-gray-200">
+      <nav className=" border-gray-200 sticky top-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={logo} className="h-8 header-logo" alt="Flowbite Logo" />
