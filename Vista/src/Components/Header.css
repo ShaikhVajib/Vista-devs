@@ -1,0 +1,15 @@
+.header-logo{
+    filter: invert(1);
+}
+
+nav{
+    background-color: var(--black);
+}
+
+.main-menu a{
+    color: var(--white) ;
+}
+
+.main-menu a:hover{
+    color: var(--hover-color) ;
+}

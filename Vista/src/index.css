@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.max-w-screen-xl{
+    max-width: 1440px;
+}
+
+:root{
+    --primary-color: #ff9800;
+    --hover-color: #fd9c0a;
+    --white:#fff;
+    --black:#000;
+    --text-color:#00000080;
+    --accent-color:#f2f2f2;
+}
+
+
