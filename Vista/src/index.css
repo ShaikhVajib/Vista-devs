@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.max-w-screen-xl{
-    max-width: 1440px;
-}
-
 :root{
     --primary-color: #ff9800;
     --hover-color: #fd9c0a;
