@@ -1,7 +1,4 @@
-
-const Header = () => {
-
-  import React from 'react';
+import React from 'react';
 import HeaderCss from './Header.module.css';
 import PrimaryButton from './PrimaryButton';
 import logo from '../assets/logo.svg';
