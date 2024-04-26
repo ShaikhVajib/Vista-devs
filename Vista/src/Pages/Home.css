@@ -2,4 +2,50 @@
     padding: 50px 20px;
     height: 95vh;
 }
+.section{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.about-img{
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.content-section p{
+    line-height: 1.6;
+}
 
+/* Only Desktop Scree Code  */
+@media (min-width:1024px) {
+    
+}
+
+
+/* Tablet & mobile Both screen css  */
+@media (max-width: 1024px) { 
+
+    
+}
+
+/* Tablet  screen code  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+
+
+}
+
+
+/* Mobile screen Only code  */
+@media (max-width: 767px) { 
+    .hero-section{
+        padding: 50px 20px;
+        height: 100%;
+    }
+    .about-img{
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+}
