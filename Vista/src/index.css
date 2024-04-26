@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global Settings */
+*{
+    font-family: "Jost", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
 :root{
     --primary-color: #ff9800;
-    --hover-color: #fd9c0a;
+    --hover-color: #ffa51f;
     --white:#fff;
     --black:#000;
     --text-color:#00000080;
@@ -12,3 +21,99 @@
 }
 
 
+/* Global Headings Desktops*/
+h1{
+    font-size: 54px;
+    line-height: 62px;
+    color: white;
+}
+h2{
+    font-size: 42px;
+    line-height: 54px;
+    color: white;
+}
+h3{
+    font-size: 34px;
+    line-height: 42px;
+    color: white;
+}
+
+/* Global Headings Mobiles */
+@media (max-width: 767px){
+    h1{
+        font-size: 38px;
+        line-height: 46px;
+        color: white;
+    }
+    h2{
+        font-size: 31px;
+        line-height: 44px;
+        color: white;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 36px;
+        color: white;
+    }
+}
+/* Primary Button  */
+.primaryBtn{
+    display: flex;
+    width: max-content;
+    background: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.primaryBtn:hover svg.mil-arrow{
+    transform: scale(1.15) rotate(45deg);
+    transition: .4s all ease;
+    
+}
+.primaryBtn:hover{
+    background-color: var(--hover-color);
+}
+svg.mil-arrow {
+    height: 35px;
+    width: 35px;
+    fill: var(--white);
+    padding: 7px;
+    margin-left: 15px;
+    background: var(--black);
+    border-radius: 50%;
+    transition: .2s all ease;
+}
+/* END */
+
+
+/* Secondary Button  */
+.secondaryBtn{
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.secondaryBtn:hover svg.mil-arrow{
+    transform: scale(1.15) translateX(3px);
+    transition: .4s all ease;
+    
+}
+svg.mil-arrow {
+    height: 35px;
+    width: 35px;
+    fill: var(--white);
+    padding: 7px;
+    margin-left: 15px;
+    border-radius: 50%;
+    transition: .2s all ease;
+}
+/* END */
