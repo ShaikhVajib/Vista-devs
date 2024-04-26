@@ -21,6 +21,41 @@
 }
 
 
+/* Global Headings Desktops*/
+h1{
+    font-size: 54px;
+    line-height: 62px;
+    color: white;
+}
+h2{
+    font-size: 42px;
+    line-height: 54px;
+    color: white;
+}
+h3{
+    font-size: 34px;
+    line-height: 42px;
+    color: white;
+}
+
+/* Global Headings Mobiles */
+@media (max-width: 767px){
+    h1{
+        font-size: 38px;
+        line-height: 46px;
+        color: white;
+    }
+    h2{
+        font-size: 31px;
+        line-height: 44px;
+        color: white;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 36px;
+        color: white;
+    }
+}
 /* Primary Button  */
 .primaryBtn{
     display: flex;
