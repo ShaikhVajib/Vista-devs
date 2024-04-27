@@ -81,7 +81,7 @@ const Home = () => {
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div className="con-btn flex justify-center gap-5 max-sm:flex-col-reverse max-sm:justify-center">
-                  <SecondaryButton btnHref="#contact" btnText="View Works" />
+                  <PrimaryButton btnHref="#contact" btnText="View Works" />
                 </div>
                 <div className="ServiceBoxs mt-5 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
                   <div className="serviceBox py-14 px-5 text-white">
