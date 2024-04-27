@@ -23,7 +23,7 @@ const Home = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <div className="con-btn flex flex-row-reverse justify-center gap-5 max-sm:flex-col-reverse max-sm:justify-center">
+              <div className="con-btn flex flex-row justify-center gap-5 max-sm:flex-col max-sm:justify-center">
                 <PrimaryButton btnHref="#contact" btnText="What We Do" />
                 <SecondaryButton btnHref="#contact" btnText="View Works" />
               </div>
