@@ -11,6 +11,10 @@
     line-height: 24px;
     font-weight: 400;
 }
+.section{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 :root{
     --primary-color: #ff9800;
     --hover-color: #ffa51f;
@@ -82,13 +86,3 @@
 }
 /* END */
 
-/* Service Section Border CSS */
-.serviceBox {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-block-start: 2px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-}
-.serviceBox:hover{
-    border-top-color:var(--hover-color);
-}
-/* End */

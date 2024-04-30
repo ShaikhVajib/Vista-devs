@@ -83,7 +83,7 @@ const Home = () => {
                 <div className="con-btn flex justify-center gap-5 max-sm:flex-col-reverse max-sm:justify-center">
                   <PrimaryButton btnHref="#contact" btnText="View Works" />
                 </div>
-                <div className="ServiceBoxs mt-5 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+                <div className="mt-5 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
                   <div className="serviceBox py-14 px-5 text-white">
                     <h3 className="mb-5">Service 1</h3>
                     <p>

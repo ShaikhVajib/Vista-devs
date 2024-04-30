@@ -13,3 +13,7 @@ nav{
 .main-menu a:hover{
     color: var(--hover-color) ;
 }
+
+a.active{
+    color: var(--primary-color);
+}

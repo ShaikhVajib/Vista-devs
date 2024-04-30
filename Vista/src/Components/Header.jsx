@@ -2,9 +2,11 @@ import React from 'react';
 import '../index.css';
 import './Header.css';
 import logo from '../assets/logo.svg';
+import { NavLink } from 'react-router-dom';
+
 
 function Header() {
-  
+
   return (
     <>    
       <nav className=" border-gray-200 sticky top-0">
@@ -22,16 +24,16 @@ function Header() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="main-menu font-medium flex flex-col p-4 md:p-0 mt-4  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
               <li>
-                <a href="/home" className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 " aria-current="page">Home</a>
+                <NavLink to="/" className=" ${isActive ? '' : ''} block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 " aria-current="page">Home</NavLink>
               </li>
               <li>
-                <a href="/about" className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">About</a>
+                <NavLink to="/about" className="${isActive ? '' : ''} block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">About</NavLink>
               </li>
               <li>
-                <a href="#" className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">Services</a>
+                <NavLink to="/services" className="${isActive ? '' : ''} block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">Services</NavLink>
               </li>
               <li>
-                <a href="/contact" className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">Contact</a>
+                <NavLink to="/contact" className="${isActive ? '' : ''} block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 ">Contact</NavLink>
               </li>
             </ul>
           </div>
