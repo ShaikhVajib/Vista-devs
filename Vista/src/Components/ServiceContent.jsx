@@ -8,7 +8,11 @@ import wm from '../assets/Icons/wordpress-maintenance.svg'
 
 const ServiceContent = [
   {
+<<<<<<< HEAD
+    img:".\src\Images\Home page About img.jpg",
+=======
     img: cwd,
+>>>>>>> 707408e426df61e3d2a3fec4682030f3ea6da6e7
     title: "Custom Web Design",
     description:
       "For new websites, landing pages or web revamp requirements, we provide custom web design services using All-in-One design solution elementor.",
