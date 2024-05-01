@@ -1,10 +1,10 @@
 import "./App.css";
-import Contact from "./Pages/Contact";
-import Home from "./Pages/Home";
-import Header from "./Components/Header.jsx";
-import Footer from "./Components/Footer.jsx";
-import Services from "./Pages/Services.jsx";
-import About from "./Pages/About.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
+import Home from "./Pages/Home/Home.jsx";
+import Header from "./Components/Header/Header.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import Services from "./Pages/Services/Services.jsx";
+import About from "./Pages/About/About.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

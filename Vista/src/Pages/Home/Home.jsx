@@ -1,8 +1,8 @@
 import React from "react";
 import "./Home.css";
-import PrimaryButton from "../Components/PrimaryButton";
-import SecondaryButton from "../Components/SecondaryButton";
-import Cta from "../Components/Cta";
+import PrimaryButton from "../../Components/Buttons/PrimaryButton";
+import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import Cta from "../../Components/Cta";
 
 const Home = () => {
   return (
@@ -61,7 +61,7 @@ const Home = () => {
           {/* right Side Image section */}
           <div className="image-section w-1/2 max-sm:w-full">
             <img
-              src=".\src\Images\Home page About img.jpg"
+              src=".\src\assets\Images\Home page About img.jpg"
               alt="CodeIsFun"
               className="about-img rounded-2xl shadow-2xl"
             />

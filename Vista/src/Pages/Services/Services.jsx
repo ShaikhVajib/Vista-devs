@@ -1,10 +1,13 @@
 import React from "react";
+<<<<<<< HEAD:Vista/src/Pages/Services.jsx
 import ServiceContent from "../Components/ServiceContent";
-import Cta from "../Components/Cta";
+=======
+import ServiceContent from "../../Components/ServiceContent";
+>>>>>>> 11e0a29f8d19d7a0475e1ee3e3446bc49d4235c6:Vista/src/Pages/Services/Services.jsx
 
 const ServiceCard = ({ img, title, description }) => (
   <div className="card">
-    <img src={img} alt={title} />
+    <img src={img} alt={title} className="h-10 fill-primary" />
     <h3>{title}</h3>
     <p>{description}</p>
   </div>
