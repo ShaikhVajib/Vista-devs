@@ -6,7 +6,7 @@ import Footer from './Components/Footer.jsx'
 import Services from './Pages/Services.jsx'
 import About from './Pages/About.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
+import PageNotFound from './Pages/PageNotFound.jsx'
 
 function App() {
   const router = createBrowserRouter([
@@ -25,8 +25,11 @@ function App() {
     {
       path:"/contact",
       element: <><Header/> <Contact/> < Footer/></>
+    },
+    {
+      path:"*",
+      element: <PageNotFound/>
     }
-
   ])
 
   return (
