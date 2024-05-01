@@ -1,6 +1,6 @@
 import React from "react";
-import PrimaryButton from "../Components/PrimaryButton";
-import errorImage from "../Images/Page-Not-Found.png";
+import PrimaryButton from "../Components/Buttons/PrimaryButton";
+import errorImage from "../assets/Images/Page-Not-Found.png";
 
 function PageNotFound() {
   return (
