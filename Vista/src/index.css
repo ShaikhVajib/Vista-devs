@@ -39,7 +39,7 @@
 }
 .primaryBtn:hover svg.mil-arrow{
     transform: scale(1.15) rotate(45deg);
-    transition: .4s all ease;
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);
     
 }
 .primaryBtn:hover{
@@ -53,7 +53,7 @@
     margin-left: 15px;
     background: var(--black);
     border-radius: 50%;
-    transition: .2s all ease;
+    transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 }
 /* END */
 
@@ -73,8 +73,7 @@
 }
 .secondaryBtn:hover svg.mil-arrow{
     transform: scale(1.15) translateX(3px);
-    transition: .4s all ease;
-    
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);    
 }
 .secondaryBtn svg.mil-arrow {
     height: 35px;
@@ -83,6 +82,6 @@
     padding: 7px;
     margin-left: 15px;
     border-radius: 50%;
-    transition: .2s all ease;
+    transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 }
 /* END */
