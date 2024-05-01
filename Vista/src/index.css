@@ -65,6 +65,7 @@
     justify-content: center;
     align-items: center;
     color: var(--white);
+    background-color: var(--black);
     font-size: 14px;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -85,4 +86,3 @@
     transition: .2s all ease;
 }
 /* END */
-
