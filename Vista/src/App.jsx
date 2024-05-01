@@ -1,42 +1,29 @@
-import './App.css'
-import Contact from './Pages/Contact'
-import Home from './Pages/Home'
-import Header from './Components/Header.jsx'
-import Footer from './Components/Footer.jsx'
-import Services from './Pages/Services.jsx'
-import About from './Pages/About.jsx'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import PageNotFound from './Pages/PageNotFound.jsx'
+import "./App.css";
+import Contact from "./Pages/Contact";
+import Home from "./Pages/Home";
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
+import Services from "./Pages/Services.jsx";
+import About from "./Pages/About.jsx";
+import PageNotFound from "./Pages/PageNotFound.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path:"/",
-      element:  <><Header/> <Home/> < Footer/></>
-    },
-    {
-      path:"/about",
-      element: <><Header/> <About/> < Footer/></>
-    },
-    {
-      path:"/services",
-      element: <><Header/> <Services/> < Footer/></>
-    },
-    {
-      path:"/contact",
-      element: <><Header/> <Contact/> < Footer/></>
-    },
-    {
-      path:"*",
-      element: <PageNotFound/>
-    }
-  ])
-
   return (
-    <> 
-    <RouterProvider router={router} />   
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
