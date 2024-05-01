@@ -5,35 +5,40 @@ import Header from './Components/Header.jsx'
 import Footer from './Components/Footer.jsx'
 import Services from './Pages/Services.jsx'
 import About from './Pages/About.jsx'
+import Error from './Pages/Error.jsx'
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 function App() {
   const router = createBrowserRouter([
+    
     {
       path:"/",
-      element:  <><Header/> <Home/> < Footer/></>
+      element: <><Header /><Home/><Footer/></>,
+      errorElement: <Error/>
     },
     {
       path:"/about",
-      element: <><Header/> <About/> < Footer/></>
+      element:  <><Header /><About/><Footer/></>
     },
     {
       path:"/services",
-      element: <><Header/> <Services/> < Footer/></>
+      element:  <><Header /><Services/><Footer/></>
     },
     {
       path:"/contact",
-      element: <><Header/> <Contact/> < Footer/></>
+      element:  <><Header /><Contact/><Footer/></>
     }
-
-  ])
+  ]);
 
   return (
-    <> 
-    <RouterProvider router={router} />   
+    <>
+      
+      <RouterProvider router={router}/>
+ 
     </>
-  )
+  );
 }
 
 export default App
