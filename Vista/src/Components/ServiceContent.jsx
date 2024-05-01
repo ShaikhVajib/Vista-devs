@@ -1,6 +1,6 @@
 const ServiceContent = [
   {
-    img: "https://example.com/image1.jpg",
+    img:".\src\Images\Home page About img.jpg",
     title: "Custom Web Design",
     description:
       "For new websites, landing pages or web revamp requirements, we provide custom web design services using All-in-One design solution elementor.",
