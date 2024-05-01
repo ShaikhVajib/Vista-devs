@@ -1,6 +1,6 @@
 import React from "react";
 import "../index.css";
-import SecondaryButton from "./SecondaryButton";
+import SecondaryButton from "./Buttons/SecondaryButton";
 
 const Cta = () => {
   return (
