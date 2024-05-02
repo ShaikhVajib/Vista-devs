@@ -3,15 +3,17 @@ import "./Home.css";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import Cta from "../../Components/Cta";
+import Services from "../Services/Services";
 
 const Home = () => {
   return (
     <>
-      <div className="home">
+      <div className="home ">
+        {/*--------------------------------------- Hero section Start --------------------------------*/}
         <div className="hero-section bg-black flex ">
           <div className="content-section max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center sm:py-12">
             <div className="content flex flex-col gap-8">
-              <h1 className="text-white text-5xl text-center max-sm:text-4xl">
+              <h1 className="text-white text-center ">
                 Designing a BattleGround Today
               </h1>
               <p className="text-gray-500  justify-center text-center">
@@ -30,13 +32,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/*--------------------------------------- Hero section End --------------------------------*/}
+
+        {/*--------------------------------------- About section Start --------------------------------*/}
         <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14">
           {/* left side content section  */}
           <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
-            <h2 className="text-6xl font-bold leading-tight max-sm:text-4xl text-black">
+            <h2 className=" leading-tight text-black">
               Lorem ipsum <br />
-              <span className="text-6xl leading-tight max-sm:text-4xl">
-                {" "}
+              <span className="text-light">
                 dolor sit amet.
               </span>
             </h2>
@@ -67,6 +71,10 @@ const Home = () => {
             />
           </div>
         </div>
+        {/*--------------------------------------- About section End --------------------------------*/}
+
+        {/*--------------------------------------- Why Choose section Start --------------------------------*/}
+
         <div className="why-choose-section">
           <div className="bg-black flex ">
             <div className="content-section py-16 px-5 max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center max-sm:py-12 max-sm:px-5">
@@ -117,9 +125,19 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/*--------------------------------------- Why Choose section End --------------------------------*/}
+
+        {/*--------------------------------------- Services Section Start --------------------------------*/}
+        <div className="services-section">
+          <Services numberOfServices={3} />
+        </div>
+        {/*--------------------------------------- Services Section End --------------------------------*/}
+        {/*--------------------------------------- Cta Section Start --------------------------------*/}
         <div className="cta-section">
           <Cta />
         </div>
+        {/*--------------------------------------- Cta Section End --------------------------------*/}
+
       </div>
     </>
   );

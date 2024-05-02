@@ -1,16 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Global Settings */
+
+/* Global Settings */  
 *{
-    font-family: "Jost", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
+    font-family: "Outfit", sans-serif;
 }
+/* typography */
+h1{
+    font-size: 75px;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+h2{
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+h3{
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+h4{
+    font-size: 20px;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.text-light{
+    font-weight: 100;
+}
+
 .section{
     padding-left: 20px;
     padding-right: 20px;
@@ -85,3 +110,66 @@
     transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 }
 /* END */
+
+/* reponsive code boilerplate */
+
+/* Only Desktop Screen Code  */
+@media (min-width:1024px) {
+    
+}
+
+/* Tablet & mobile Both screen css  */
+@media (max-width: 1024px) { 
+ 
+}
+
+/* Tablet  screen code  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+   
+    h1{
+        font-size: 58px;
+        line-height: 1.2em;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 48px;
+        line-height: 1.2em;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 22px;
+        line-height: 1.3em;
+        font-weight: 500;
+    }
+    h4{
+        font-size: 20px;
+        line-height: 1.4em;
+        font-weight: 500;
+    }
+
+}
+
+/* Mobile screen Only code  */
+@media (max-width: 767px) { 
+    h1{
+        font-size: 52px;
+        line-height: 1.3em;
+        font-weight: 500;
+    }
+    h2{
+        font-size: 42px;
+        line-height: 1.2em;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 24px;
+        line-height: 1.4em;
+        font-weight: 500;
+    }
+    h4{
+        font-size: 20px;
+        line-height: 1.4em;
+        font-weight: 500;
+    }    
+}
+    

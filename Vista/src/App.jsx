@@ -8,6 +8,7 @@ import About from "./Pages/About/About.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 function App() {
   return (
     <>

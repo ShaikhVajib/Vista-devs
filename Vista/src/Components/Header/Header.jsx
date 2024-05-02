@@ -6,15 +6,11 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <>
-      <nav className=" border-gray-200 sticky top-0">
-        <div className="max-w-screen-xl py-6 flex flex-wrap items-center justify-between mx-auto p-4">
-          {/* Logo */}
-          <a
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img src={logo} className="h-8 z-50 header-logo" alt="Logo" />
+    <>    
+      <nav className=" border-gray-200 sticky top-0 z-50">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src={logo} className="h-8 header-logo" alt="Logo" />
           </a>
           {/* Mobile Menu */}
           <label
