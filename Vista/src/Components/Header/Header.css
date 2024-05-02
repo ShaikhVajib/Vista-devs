@@ -8,12 +8,26 @@ nav{
 
 .main-menu a{
     color: var(--white) ;
+    padding: 5px 20px;
+    border-radius: 15px 0 15px 0;
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);    
 }
 
 .main-menu a:hover{
-    color: var(--hover-color) ;
+    background: var(--hover-color) ;
+    border-radius: 0 15px 0 15px;
+    padding: 5px 20px;
+    color: black;
+    transform: scale(0.9);
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);
+    border: none;  
 }
 
 a.active{
-    color: var(--primary-color);
+    background: var(--primary-color);
+    border-radius: 15px 0 15px 0;
+    padding: 5px 20px;
+    color: black;
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);    
+    border: none;   
 }
