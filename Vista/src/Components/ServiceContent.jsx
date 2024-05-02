@@ -8,7 +8,6 @@ import wm from '../assets/Icons/wordpress-maintenance.svg'
 
 const ServiceContent = [
   {
-    key:"1",
     img: cwd,
     title: "Custom Web Design",
     description:
