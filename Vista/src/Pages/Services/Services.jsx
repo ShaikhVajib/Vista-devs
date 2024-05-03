@@ -1,35 +1,28 @@
 import React from "react";
-import './Services.css';
-import ServiceContent from "../../Components/ServiceContent";
+import ServicesComponent from "../../Components/Services/ServicesComponent";
+import Cta from "../../Components/Cta";
 
-
-
-
-
-const ServiceCard = ({ img, title, description }) => (
-  <div className="service-card bg-white border p-6 flex  flex-col gap-y-6 rounded-xl max-sm:p-5 max-sm:gap-y-4 shadow-xl " >
-    <img src={img} alt={title} className="h-10  self-start service-card-icon" />
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </div>
-);
-const Services = ({numberOfServices, i}) => {
-  const servicesToShow = ServiceContent.slice(0, numberOfServices);
-
+const Services = () => {
   return (
     <>
-    <div className="max-w-screen-xl m-auto">
-    <div className="service-section grid grid-cols-3 gap-6 section py-14 max-sm:grid-cols-1 max-lg:grid-cols-2  ">
-      {servicesToShow.map((service) => (
-        <ServiceCard
-        key={service.key}
-          img={service.img}
-          title={service.title}
-          description={service.description}/>
-      ))}
-      </div>
-    </div>
-    
+      {/*--------------------------------------- Services hero section Start --------------------------------*/}
+      <section className="services-hero">
+        This Is Hero Section 
+
+      </section>
+      {/*--------------------------------------- Services hero section End --------------------------------*/}
+
+
+      {/*--------------------------------------- Services section Start --------------------------------*/}
+      <section className="services-grid">
+        <ServicesComponent/>
+      </section>
+      {/*--------------------------------------- Services section End --------------------------------*/}
+      {/*--------------------------------------- Cta Section Start --------------------------------*/}
+      <div className="cta-section">
+          <Cta />
+        </div>
+        {/*--------------------------------------- Cta Section End --------------------------------*/}
     </>
   );
 };

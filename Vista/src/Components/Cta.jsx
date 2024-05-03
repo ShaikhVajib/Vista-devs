@@ -18,7 +18,7 @@ const Cta = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto maxime, eius aperiam natus eos aliquam animi voluptatibus eligendi, rerum blanditiis illo. Repellat dolorum minima corporis blanditiis beatae pariatur doloremque. Nisi, assumenda fuga. Porro, ipsum!
           </p>
           <SecondaryButton
-            className="bg-black"
+            className="!bg-black"
             btnHref="#contact"
             btnText="Contact Us"
           />

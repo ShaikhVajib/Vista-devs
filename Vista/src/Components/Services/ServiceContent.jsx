@@ -1,13 +1,14 @@
-import cwd from '../assets/Icons/custom-web-design.svg'
-import wd from '../assets/Icons/wordpress-development.svg'
-import ecd from '../assets/Icons/ecommerce-development.svg'
-import seo from '../assets/Icons/seo.svg'
-import ctw from '../assets/Icons/psd-to-wp.svg'
-import wm from '../assets/Icons/wordpress-maintenance.svg'
+import cwd from '../../assets/Icons/custom-web-design.svg'
+import wd from '../../assets/Icons/wordpress-development.svg'
+import ecd from '../../assets/Icons/ecommerce-development.svg'
+import seo from '../../assets/Icons/seo.svg'
+import ctw from '../../assets/Icons/psd-to-wp.svg'
+import wm from '../../assets/Icons/wordpress-maintenance.svg'
 
 
 const ServiceContent = [
   {
+    key:"1",
     img: cwd,
     title: "Custom Web Design",
     description:
