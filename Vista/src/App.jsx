@@ -6,7 +6,6 @@ import Footer from "./Components/Footer/Footer.jsx";
 import Services from "./Pages/Services/Services.jsx";
 import About from "./Pages/About/About.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
-import SingleService from "./Pages/Services/SingleService.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
@@ -21,8 +20,6 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route path="/services/:serviceId" component={SingleService} />
-
         </Routes>
         <Footer />
       </Router>
