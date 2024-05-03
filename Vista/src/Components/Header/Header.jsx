@@ -23,7 +23,7 @@ function Header() {
               &nbsp;
             </div>
             <div class="fixed top-0 right-0 z-40 w-full -translate-y-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-y-0">
-              <div class="float-right min-h-full w-[100%] bg-black px-6 pt-24 pb-16 justify-center flex text-center shadow-2xl text-white">
+              <div class="float-right min-h-full w-[100%] bg-black px-6 pt-24 pb-36 justify-center flex text-center shadow-2xl text-white">
                 <menu>
                   <li>
                     <NavLink
