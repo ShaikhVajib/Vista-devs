@@ -4,6 +4,7 @@ import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import Cta from "../../Components/Cta";
 import Services from "../Services/Services";
+import Breadcrumbs from "../../Components/Breadcrumbs";
 
 const Home = () => {
   return (
