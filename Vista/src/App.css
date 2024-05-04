@@ -62,7 +62,8 @@ p{
 }
 
 /* Primary Button  */
-.primaryBtn{
+.primaryBtn,
+.contact-button{
     display: flex;
     width: max-content;
     background: var(--primary-color);
@@ -74,15 +75,18 @@ p{
     text-transform: uppercase;
     font-weight: 600;
 }
-.primaryBtn:hover svg.mil-arrow{
+.primaryBtn:hover svg.mil-arrow,
+.contact-button:hover svg.mil-arrow{
     transform: scale(1.15) rotate(45deg);
     transition: all .7s cubic-bezier(.47,1.64,.41,.8);
     
 }
-.primaryBtn:hover{
+.primaryBtn:hover,
+.contact-button:hover{
     background-color: var(--hover-color);
 }
-.primaryBtn svg.mil-arrow {
+.primaryBtn svg.mil-arrow,
+.contact-button svg.mil-arrow {
     height: 35px;
     width: 35px;
     fill: var(--white);

@@ -9,7 +9,7 @@ import Servicescomp from "../../Components/Services/ServicesComponent";
 const Home = () => {
   return (
     <>
-      <div className="home ">
+      <div className="home">
         {/*--------------------------------------- Hero section Start --------------------------------*/}
         <div className="hero-section bg-black flex ">
           <div className="content-section max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center sm:py-12">

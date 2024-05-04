@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary-color)',  
+        primary: 'var(--primary-color)',
+        hover: 'var(--hover-color)',
+        accent: 'var(--accent-color)',
       },
     },
   },

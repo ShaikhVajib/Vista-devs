@@ -2,7 +2,7 @@ import React from "react";
 
 const PrimaryButton = ({btnHref, btnText, className}) =>{
   
-  const buttonClasses=`pl-7 pr-4 py-3 rounded-full text-white primaryBtn  ${className}`;
+  const buttonClasses=`pl-7 pr-4 py-3 rounded-full text-white primaryBtn ${className}`;
 
   return (
     <div className='max-sm:flex max-sm:justify-center'>

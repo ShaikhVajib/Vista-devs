@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../index.css";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 
 function Header() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const modeToggle = () =>{
+    setDarkMode(!darkMode)
+  }
   return (
     <>    
       <nav className=" border-gray-200 sticky top-0 z-50">
@@ -99,6 +104,9 @@ function Header() {
                 </NavLink>
               </li>
             </ul>
+          </div>
+          <div className="mode-section">
+            <button className="text-white" onClick={modeToggle}>{darkMode ? "Dark Mode": "Light Mode"}</button>
           </div>
         </div>
       </nav>
