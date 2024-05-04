@@ -3,7 +3,8 @@ import "./Home.css";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import Cta from "../../Components/Cta";
-import Services from "../Services/Services";
+import Servicescomp from "../../Components/Services/ServicesComponent";
+
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           <div className="content-section max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center sm:py-12">
             <div className="content flex flex-col gap-8">
               <h1 className="text-white text-center ">
-                Designing a BattleGround Today
+                Designing a Battle<span className="text-light">Ground Today</span>
               </h1>
               <p className="text-gray-500  justify-center text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -27,7 +28,7 @@ const Home = () => {
               </p>
               <div className="con-btn flex flex-row justify-center items-center gap-5 max-sm:flex-col max-sm:justify-center">
                 <PrimaryButton btnHref="#contact" btnText="What We Do" />
-                <SecondaryButton btnHref="#contact" btnText="View Works" />
+                <SecondaryButton btnHref="#contact" btnText="View Works" className="!bg-gray-900" />
               </div>
             </div>
           </div>
@@ -38,7 +39,7 @@ const Home = () => {
         <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14">
           {/* left side content section  */}
           <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
-            <h2 className=" leading-tight text-black">
+            <h2 className=" leading-tight text-black big-heding">
               Lorem ipsum <br />
               <span className="text-light">
                 dolor sit amet.
@@ -90,6 +91,7 @@ const Home = () => {
                 </p>
                 <div className="con-btn flex justify-center gap-5 max-sm:flex-col-reverse max-sm:items max-sm:justify-center">
                   <PrimaryButton btnHref="#contact" btnText="View Works" />
+                  
                 </div>
                 <div className="mt-5 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
                   <div className="content-box py-14 px-5 text-white">
@@ -129,7 +131,7 @@ const Home = () => {
 
         {/*--------------------------------------- Services Section Start --------------------------------*/}
         <div className="services-section">
-          <Services numberOfServices={3} />
+          <Servicescomp numberOfServices={3} />
         </div>
         {/*--------------------------------------- Services Section End --------------------------------*/}
         {/*--------------------------------------- Cta Section Start --------------------------------*/}
