@@ -1,21 +1,26 @@
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Breadcrumbs = () => {
   const { pathname } = useLocation();
   const paths = pathname.split('/').filter((path) => path);
 
-  const breadcrumbs = [{ label: 'Home', url: '/' }, ...paths.map((path, index) => ({
-    label: path,
-    url: `/${paths.slice(0, index + 1).join('/')}`
-  }))];
-
   return (
-    <div className="breadcrumbs">
-      {breadcrumbs.map(({ label, url }, index) => (
+    <div className="breadcrumbs uppercase text-sm tracking-widest text-white">
+      <Link to="/" className="hover:text-primary">Home</Link>
+      {paths.map((path, index) => (
         <span key={index}>
-          {index > 0 && ' / '}
-          <Link to={url}>{label}</Link>
+          {' / '}
+          {index === paths.length - 1 ? (
+            <span className="text-primary">{path}</span>
+          ) : (
+            <Link 
+              to={`/${paths.slice(0, index + 1).join('/')}`} 
+              className="hover:text-primary"
+            >
+              {path}
+            </Link>
+          )}
         </span>
       ))}
     </div>

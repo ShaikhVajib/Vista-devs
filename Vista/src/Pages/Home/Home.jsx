@@ -4,7 +4,6 @@ import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import Cta from "../../Components/Cta";
 import Services from "../Services/Services";
-import Breadcrumbs from "../../Components/Breadcrumbs";
 
 const Home = () => {
   return (
@@ -26,7 +25,7 @@ const Home = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <div className="con-btn flex flex-row justify-center gap-5 max-sm:flex-col max-sm:justify-center">
+              <div className="con-btn flex flex-row justify-center items-center gap-5 max-sm:flex-col max-sm:justify-center">
                 <PrimaryButton btnHref="#contact" btnText="What We Do" />
                 <SecondaryButton btnHref="#contact" btnText="View Works" />
               </div>
@@ -89,7 +88,7 @@ const Home = () => {
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                <div className="con-btn flex justify-center gap-5 max-sm:flex-col-reverse max-sm:justify-center">
+                <div className="con-btn flex justify-center gap-5 max-sm:flex-col-reverse max-sm:items max-sm:justify-center">
                   <PrimaryButton btnHref="#contact" btnText="View Works" />
                 </div>
                 <div className="mt-5 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
