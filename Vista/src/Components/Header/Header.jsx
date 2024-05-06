@@ -1,21 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../index.css";
-import { useEffect } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
-  const modeToggle = () =>{
-    setDarkMode(!darkMode)
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>    
-      <nav className=" border-gray-200 sticky top-0 z-50">
+      <nav className="fixed w-full order-gray-200 top-0 z-50 bg-transparent">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${scrolling ? 'bg-primary py-2 px-5 rounded-full shadow-lg' : 'bg-transparent' } `}>
               <img src={logo} className="h-8 header-logo" alt="Logo" />
           </a>
           {/* Mobile Menu */}
@@ -106,17 +119,13 @@ function Header() {
               </li>
             </ul>
           </div>
-          <div className="mode-section">
+          {/* <div className="mode-section">
             <button className="text-white" onClick={modeToggle}>{darkMode ? "Dark Mode": "Light Mode"}</button>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
   );
 }
 
-Header.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  toggleDarkMode: PropTypes.func.isRequired,
-};
 export default Header;
