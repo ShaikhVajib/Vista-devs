@@ -22,7 +22,7 @@ const Contact = () => {
       {/*--------------------------------------- Contact hero section Start --------------------------------*/}
       <div className="contact-hero-section">
         <div className="bg-black flex ">
-          <div className="content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5">
+          <div className="content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5 max-sm:pt-28">
             <div className="content flex flex-col gap-8 max-sm:items-center">
               <Breadcrumbs />
               <h2 className="big-heding leading-tight text-white max-sm:text-center">
@@ -55,7 +55,7 @@ const Contact = () => {
                     id="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="border border-gray-300 rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
+                    className="rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
                   />
                 </div>
                 <div className="mb-4">
@@ -67,7 +67,7 @@ const Contact = () => {
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="border border-gray-300 rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
+                    className="rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
                   />
                 </div>
                 <div className="mb-4">
@@ -79,7 +79,7 @@ const Contact = () => {
                     id="phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="border border-gray-300 rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
+                    className="rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
                   />
                 </div>
                 <div className="mb-4">
@@ -90,7 +90,7 @@ const Contact = () => {
                     id="message"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="border border-gray-300 rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
+                    className="rounded-md px-3 py-2 w-full bg-slate-700 border-1 border-black"
                     rows={4}
                   ></textarea>
                 </div>
