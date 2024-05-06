@@ -1,7 +1,9 @@
 .header-logo{
     filter: invert(1);
 }
-
+body[dark-mode="true"] .header-logo{
+    filter: invert(0);
+}
 nav{
     background-color: var(--black);
 }
