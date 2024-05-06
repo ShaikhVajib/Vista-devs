@@ -1,19 +1,21 @@
-import React, { useState } from "react";
 import "../../index.css";
+import { useEffect } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
-function Header() {
-  const [darkMode, setDarkMode] = useState(false);
 
-  const modeToggle = () =>{
-    setDarkMode(!darkMode)
-  }
+function Header({ darkMode, toggleDarkMode }) {
+  useEffect(()=>{
+    darkMode
+    ? document.body.setAttribute("dark-mode", "true")
+    : document.body.removeAttribute("dark-mode");
+}, [darkMode]);
   return (
     <>    
       <nav className=" border-gray-200 sticky top-0 z-50">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" >
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={logo} className="h-8 header-logo" alt="Logo" />
           </a>
@@ -106,7 +108,7 @@ function Header() {
             </ul>
           </div>
           <div className="mode-section">
-            <button className="text-white" onClick={modeToggle}>{darkMode ? "Dark Mode": "Light Mode"}</button>
+            <button className={` ${darkMode ? "text-dark" : "text-white" }`} onClick={toggleDarkMode}>{darkMode ? "Dark Mode": "Light Mode"}</button>
           </div>
         </div>
       </nav>
@@ -114,4 +116,8 @@ function Header() {
   );
 }
 
+Header.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
+};
 export default Header;
