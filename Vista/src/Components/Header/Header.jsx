@@ -1,22 +1,34 @@
+import React, { useState, useEffect } from "react";
 import "../../index.css";
-import { useEffect } from "react";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 
+function Header() {
+  // const [darkMode, setDarkMode] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
-function Header({ darkMode, toggleDarkMode }) {
-  useEffect(()=>{
-    darkMode
-    ? document.body.setAttribute("dark-mode", "true")
-    : document.body.removeAttribute("dark-mode");
-}, [darkMode]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>    
-      <nav className=" border-gray-200 sticky top-0 z-50">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4" >
-          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+      <nav className="fixed w-full order-gray-200 top-0 z-50 bg-transparent">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${scrolling ? 'bg-primary py-2 px-5 rounded-full shadow-lg' : 'bg-transparent' } `}>
               <img src={logo} className="h-8 header-logo" alt="Logo" />
           </a>
           {/* Mobile Menu */}
@@ -70,7 +82,7 @@ function Header({ darkMode, toggleDarkMode }) {
             </div>
           </label>
           {/* Desktop Nav Menu */}
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <div className={`hidden w-full md:block md:w-auto shadow-lg bg-slate-700 backdrop-blur-lg p-2 rounded-full ${scrolling ? 'bg-slate-700/25 transition-all duration-500' : 'bg-slate-700 transition-all duration-500' }`} id="navbar-default">
             <ul className="main-menu font-medium flex flex-col p-4 md:p-0 mt-4  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
               <li>
                 <NavLink
@@ -107,17 +119,13 @@ function Header({ darkMode, toggleDarkMode }) {
               </li>
             </ul>
           </div>
-          <div className="mode-section">
-            <button className={` ${darkMode ? "text-dark" : "text-white" }`} onClick={toggleDarkMode}>{darkMode ? "Dark Mode": "Light Mode"}</button>
-          </div>
+          {/* <div className="mode-section">
+            <button className="text-white" onClick={modeToggle}>{darkMode ? "Dark Mode": "Light Mode"}</button>
+          </div> */}
         </div>
       </nav>
     </>
   );
 }
 
-Header.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  toggleDarkMode: PropTypes.func.isRequired,
-};
 export default Header;

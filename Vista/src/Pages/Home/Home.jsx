@@ -11,8 +11,8 @@ const Home = () => {
     <>
       <div className="home">
         {/*--------------------------------------- Hero section Start --------------------------------*/}
-        <div className="hero-section bg-black flex ">
-          <div className="content-section max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center sm:py-12">
+        <div className="hero-section bg-black flex">
+          <div className="content-section max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center sm:py-12 max-sm:pt-24">
             <div className="content flex flex-col gap-8">
               <h1 className="text-white text-center ">
                 Designing a Battle<span className="text-light">Ground Today</span>
