@@ -10,6 +10,7 @@ export default {
         primary: 'var(--primary-color)',
         hover: 'var(--hover-color)',
         accent: 'var(--accent-color)',
+        textcolor: 'var(--text-color)',
       },
     },
   },

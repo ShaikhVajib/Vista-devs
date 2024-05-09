@@ -5,7 +5,6 @@ import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 
 function Header() {
-  // const [darkMode, setDarkMode] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
@@ -119,9 +118,6 @@ function Header() {
               </li>
             </ul>
           </div>
-          {/* <div className="mode-section">
-            <button className="text-white" onClick={modeToggle}>{darkMode ? "Dark Mode": "Light Mode"}</button>
-          </div> */}
         </div>
       </nav>
     </>

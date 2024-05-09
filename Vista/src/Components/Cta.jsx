@@ -6,7 +6,7 @@ const Cta = () => {
   return (
     <>
       <div className="services-section">
-          <div className="bg-black flex px-5 pt-7 pb-24">
+          <div className="bg-black flex px-5 pt-20 pb-24">
         <section className="max-w-screen-xl rounded-3xl m-auto bg-primary text-black flex flex-col gap-5 text-center justify-center items-center section py-10 !px-7 shadow-lg shadow-orange-700/70">
           <h2 className="text-4xl font-medium">
             This Is{" "}
