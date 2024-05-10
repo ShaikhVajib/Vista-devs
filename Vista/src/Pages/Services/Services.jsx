@@ -1,8 +1,14 @@
 import ServicesComponent from "../../Components/Services/ServicesComponent";
 import Cta from "../../Components/Cta";
 import Breadcrumbs from "../../Components/Breadcrumbs";
+import Scroll from "../../assets/Icons/scroll-obj.svg";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const Services = () => {
+  const scrollToNextSection = () => {
+    scroll.scrollTo(window.innerHeight); // Adjust the scroll offset as needed
+  };
+
   return (
     <>
       {/*--------------------------------------- Services hero section Start --------------------------------*/}
@@ -19,7 +25,14 @@ const Services = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptas. 
           </p>
 
-             
+              <ScrollLink
+                to="nxt-section"
+                smooth={true}
+                duration={1000}
+                onClick={scrollToNextSection}
+              >
+                <img src={Scroll} width="100px" className="cursor-pointer"/>
+              </ScrollLink>
             </div>
           </div>
         </div>
