@@ -1,4 +1,3 @@
-import React from "react";
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
 import errorImage from "../assets/Images/Page-Not-Found.png";
 
