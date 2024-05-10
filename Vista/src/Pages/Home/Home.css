@@ -38,6 +38,16 @@
 
 }
 
+.why-choose-section .content-box:hover .aeroBtn svg{
+    transform: scale(1);
+    filter: grayscale(0);
+}
+.why-choose-section .content-box .aeroBtn svg{    
+    transform: scale(0.4);
+    transition: all .7s cubic-bezier(.47,1.64,.41,.8);
+    filter: grayscale(100);   
+}
+
 /* End */
 
 
