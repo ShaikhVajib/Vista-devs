@@ -1,4 +1,3 @@
-import React from "react";
 import "./Home.css";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
@@ -36,7 +35,7 @@ const Home = () => {
         {/*--------------------------------------- Hero section End --------------------------------*/}
 
         {/*--------------------------------------- About section Start --------------------------------*/}
-        <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14">
+        <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14 bg-white">
           {/* left side content section  */}
           <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
             <h2 className=" leading-tight text-black big-heding">
