@@ -1,3 +1,18 @@
 footer{
     background-color: var(--black);
 }
+.navigation a{
+    padding: 5px 0;
+    font-size: 28px;
+    font-weight: 600;
+    transition: all 0.3s linear;
+}
+.navigation a:hover, .navigation a.active{
+    color: var(--primary-color);
+}
+
+@media screen and (min-width:1025px){
+    .navigation a:hover, .navigation a.active{
+        padding-left: 15px;    
+}
+}

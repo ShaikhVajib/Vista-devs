@@ -10,7 +10,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { name, email, phone, message });
+    // console.log("Form submitted:", { name, email, phone, message });
+    const formData = { name, email, phone, message };
+    localStorage.setItem("formData", JSON.stringify(formData));
     setName("");
     setEmail("");
     setPhone("");
@@ -42,7 +44,7 @@ const Contact = () => {
       {/*--------------------------------------- Contact section Start --------------------------------*/}
       <section className="contact-main-section">
         <div className="bg-accent flex ">
-          <div className="content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5">
+          <div className="content-section py-40 px-5 max-w-screen-lg mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5">
             <div className="content flex flex-col gap-8 max-sm:items-center bg-black p-14 max-sm:p-8 rounded-3xl">
               <h2 className="font-semibold text-4xl pb-5 text-white">Contact Us</h2>
               <form onSubmit={handleSubmit} className="text-white text-xl w-full">
