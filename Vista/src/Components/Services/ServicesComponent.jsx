@@ -16,7 +16,7 @@ const ServicesComponent = ({numberOfServices, i}) => {
   return (
     <>       
     <div className="max-w-screen-xl m-auto">
-    <div className="service-section grid grid-cols-3 gap-8 section py-14 max-sm:grid-cols-1 max-lg:grid-cols-2  ">
+    <div className="service-section grid grid-cols-3 gap-6 py-5 max-sm:grid-cols-1 max-lg:grid-cols-2  ">
       {servicesToShow.map((service) => (
         <ServiceCard
           key={service.key}

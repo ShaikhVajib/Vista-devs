@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../../index.css";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
@@ -25,11 +25,13 @@ function Header() {
 
   return (
     <>    
+
       <nav className="fixed w-full order-gray-200 top-0 z-50 bg-transparent">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${scrolling ? 'bg-primary py-2 px-5 rounded-full shadow-lg' : 'bg-transparent' } `}>
-              <img src={logo} className="h-8 header-logo" alt="Logo" />
+              <img src={logo} className="h-8 header-logo " alt="Logo" />
           </a>
+        
           {/* Mobile Menu */}
           <label
             className="relative md:hidden z-40 cursor-pointer px-3 py-6"
