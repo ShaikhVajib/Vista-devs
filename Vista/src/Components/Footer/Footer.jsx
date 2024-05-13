@@ -18,7 +18,7 @@ function Footer() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas et facere sed adipisci eos.
             </p>
           </div>
-          <div className="navigation max-sm:text-center w-1/4 max-xl:w-2/5  max-sm:w-full">
+          <div className="navigation max-sm:text-center w-1/4 max-xl:w-2/5  max-sm:w-full -mt-2">
             <ul>            <li>
               <NavLink
                 to="/"
@@ -59,7 +59,7 @@ function Footer() {
             <h3 className="text-white mb-3 text-3xl" >Get in touch</h3>
             <ul className='text-white'>
               <li className='mb-3'>Location xyz...</li>
-              <li>12 3465 7890</li>
+              <li> <NavLink to="tel:1234567890"> 12 3465 7890 </NavLink></li>
             </ul>
           </div>
         </div>
@@ -71,8 +71,13 @@ function Footer() {
               <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
             </li>
             <li>
-              <a href="#" className="hover:underline">Contact</a>
-            </li>
+                <NavLink
+                  to="/contact"
+                  className="hover:underline me-4 md:me-6 "
+                >
+                  Contact
+                </NavLink>
+              </li>
           </ul>
         </div>
       </footer>

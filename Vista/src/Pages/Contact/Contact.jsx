@@ -46,7 +46,7 @@ const Contact = () => {
   return (
     <>
       {/*--------------------------------------- Contact hero section Start --------------------------------*/}
-      <div className="contact-hero-section">
+      <section className="services-hero">
         <div className="bg-black flex ">
           <div className="content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5 max-sm:pt-28">
             <div className="content flex flex-col gap-8 max-sm:items-center">
@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/*--------------------------------------- Contact hero section End --------------------------------*/}
 
       {/*--------------------------------------- Contact section Start --------------------------------*/}

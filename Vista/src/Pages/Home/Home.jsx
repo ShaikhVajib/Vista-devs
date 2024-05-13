@@ -172,7 +172,7 @@ const Home = () => {
 
         {/*--------------------------------------- Services Section Start --------------------------------*/}
         <div className="services-section bg-accent">
-          <div className="content-section py-32 px-5 max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center max-sm:py-12 max-sm:px-5">
+          <div className="content-section pt-28 pb-72 px-5 max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center max-sm:pt-12 max-sm:py-60 max-sm:px-5">
             <div className="content flex flex-col gap-5">
               <h2 className="text-black text-5xl text-center max-sm:text-4xl big-heading">
                 Our Services
