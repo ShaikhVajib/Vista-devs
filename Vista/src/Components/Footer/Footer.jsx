@@ -16,7 +16,7 @@ function Footer() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas et facere sed adipisci eos.
             </p>
           </div>
-          <div className="navigation max-sm:text-center w-1/4 max-xl:w-2/5  max-sm:w-full">
+          <div className="navigation max-sm:text-center w-1/4 max-xl:w-2/5  max-sm:w-full -mt-2">
             <ul>            <li>
               <NavLink
                 to="/"
@@ -57,20 +57,25 @@ function Footer() {
             <h3 className="text-white mb-3 text-3xl" >Get in touch</h3>
             <ul className='text-white'>
               <li className='mb-3'>Location xyz...</li>
-              <li>12 3465 7890</li>
+              <li> <NavLink to="tel:1234567890"> 12 3465 7890 </NavLink></li>
             </ul>
           </div>
         </div>
         <div className="copyright-section border-t border-gray-600 w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between max-sm:text-center">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/" className="hover:underline">Vista™</a>. All Rights Reserved.
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <NavLink to="/" className="hover:underline">Vista™</NavLink>. All Rights Reserved.
           </span>
           <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0 max-sm:justify-center">
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
             </li>
             <li>
-              <a href="#" className="hover:underline">Contact</a>
-            </li>
+                <NavLink
+                  to="/contact"
+                  className="hover:underline me-4 md:me-6 "
+                >
+                  Contact
+                </NavLink>
+              </li>
           </ul>
         </div>
       </footer>
