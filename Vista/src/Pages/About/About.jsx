@@ -1,33 +1,13 @@
-import React from "react";
 import Breadcrumbs from "../../Components/Breadcrumbs";
-import PrimaryButton from "../../Components/Buttons/PrimaryButton";
-import Scroll from "../../assets/Icons/scroll-obj.svg";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import AeroButton from "../../Components/Buttons/AeroButton";
-import { useEffect } from "react";
+import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import ArrowButton from "../../Components/Buttons/ArrowButton";
 
 const About = () => {
-  // Next Section Smooth Scroll
-  const scrollToNextSection = () => {
-    scroll.scrollTo(window.innerHeight);
-  };
-  // Scroll Icon Animation
-  useEffect(() => {
-    const scrollIcon = document.getElementById("scroll-icon");
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop;
-      scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  
   return (
-    <div>
-      <div className="about-hero-section">
+    <>
+       {/* About Us Page Hero Section Start  */}
+      <div className="about-hero-section" >
         <div className="bg-black flex ">
           <div className="content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-col justify-center gap-6 flex-nowrap max-sm:py-12 max-sm:px-5 max-sm:pt-28">
             <div className="content flex flex-col gap-8 max-sm:items-center">
@@ -40,26 +20,50 @@ const About = () => {
                 voluptas.
               </p>
 
-              <ScrollLink
-                to="nxt-section"
-                smooth={true}
-                duration={1000}
-                onClick={scrollToNextSection}
-                className="scroll-con"
-              >
-                <img
-                  src={Scroll}
-                  width="100px"
-                  className="cursor-pointer"
-                  id="scroll-icon"
-                />
-                <AeroButton className="scroll-link-aero rotate-90 ml-11 mt-4" />
-              </ScrollLink>
+              <ArrowButton scrollTo="nxt-section" />
+
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>       
+         {/*--------------------------------------- About section Start --------------------------------*/}
+         <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14 bg-white" id="nxt-section">
+          {/* left side content section  */}
+          <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
+            <h2 className="leading-tight text-black big-heading">
+              Lorem ipsum <br />
+              <span className="text-light">dolor sit amet.</span>
+            </h2>
+            <p className="mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
+              voluptate.
+            </p>
+            <p className="mt-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              eum corporis porro consectetur quaerat eius labore officiis
+              placeat beatae sequi voluptas, aperiam quas! Fuga, aliquam!
+            </p>
+            <p className="mt-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              eum corporis porro consectetur quaerat eius labore officiis
+              placeat beatae sequi voluptas, aperiam quas! Fuga, aliquam!
+            </p>
+            <div className="flex mt-8  gap-5 max-sm:flex-col-reverse max-sm:justify-center max-sm:mt-6">
+              <SecondaryButton btnHref="/about" btnText="About Us" />
+            </div>
+          </div>
+          {/* right Side Image section */}
+          <div className="image-section w-1/2 max-sm:w-full">
+            <img
+              src=".\src\assets\Images\Home page About img.jpg"
+              alt="CodeIsFun"
+              className="about-img rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+        {/*--------------------------------------- About section End --------------------------------*/}
+
+    </>
   );
 };
 

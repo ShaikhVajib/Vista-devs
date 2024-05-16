@@ -1,31 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Breadcrumbs from "../../Components/Breadcrumbs";
-import Scroll from "../../assets/Icons/scroll-obj.svg";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import AeroButton from "../../Components/Buttons/AeroButton";
 import Envelop from "../../assets/Icons/envelop-outline.svg";
 import Phone from "../../assets/Icons/phone-outline.svg";
 import Marker from "../../assets/Icons/marker-outline.svg";
+import Iframe from 'react-iframe'
+import ArrowButton from "../../Components/Buttons/ArrowButton";
+
 
 const Contact = () => {
-  // Next Section Smooth Scroll
-  const scrollToNextSection = () => {
-    scroll.scrollTo(window.innerHeight);
-  };
-  // Scroll Icon Animation
-  useEffect(() => {
-    const scrollIcon = document.getElementById("scroll-icon");
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop;
-      scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -52,27 +34,14 @@ const Contact = () => {
             <div className="content flex flex-col gap-8 max-sm:items-center">
               <Breadcrumbs />
               <h1 className="big-heding leading-tight text-white max-sm:text-center">
-                Get in touch <span className="text-light">!</span>
+                Get in <span className="text-light">touch!</span>
               </h1>
               <p className="text-gray-500  justify-center mb-10 max-sm:mb-5 w-1/3 max-sm:w-full max-sm:text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
                 voluptas.
               </p>
-              <ScrollLink
-                to="nxt-section"
-                smooth={true}
-                duration={1000}
-                onClick={scrollToNextSection}
-                className="scroll-con"
-              >
-                <img
-                  src={Scroll}
-                  width="100px"
-                  className="cursor-pointer"
-                  id="scroll-icon"
-                />
-                <AeroButton className="scroll-link-aero rotate-90 ml-11 mt-4" />
-              </ScrollLink>
+              <ArrowButton scrollTo="nxt-section"/>
+
             </div>
           </div>
         </div>
@@ -81,11 +50,10 @@ const Contact = () => {
 
       {/*--------------------------------------- Contact section Start --------------------------------*/}
       <section className="bg-white contact-main-section">
-      <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Zespires+(Zespires%20Technology)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps vehicle tracker</a></iframe>
-        <div className="nxt-section content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-row justify-center gap-10 max-sm:flex-col max-sm:py-12 max-sm:px-5 max-lg:flex-col">
-          <div className="content flex flex-col gap-8 justify-center max-sm:items-center w-3/4 pr-10 rounded-3xl max-sm:w-full max-lg:w-full ">
+        <div className="nxt-section content-section py-20 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-row justify-center gap-10 max-sm:flex-col max-sm:py-12 max-sm:px-5 max-lg:flex-col" id="nxt-section"> 
+          <div className="content flex flex-col gap-8 justify-center max-sm:items-center w-3/4 pr-10 rounded-3xl max-sm:w-full max-lg:w-full max-sm:mr-0 max-sm:pr-0 mr-16 ">
             <h2 className="font-semibold text-4xl pb-5 text-black">
-            Let's<span className="text-light">Talk</span>  
+            Let`s<span className="text-light">Talk</span>  
             </h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-7 text-black text-xl w-full mt-5">
               <div className="mb-4">
@@ -146,7 +114,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
-          <div className="content flex flex-col gap-8 max-sm:items-center w-1/4 max-sm:w-full max-lg:w-full">
+          <div className="content flex flex-col gap-8 max-sm:items-center w-3/12 max-sm:w-full max-lg:w-full">
             <a
               href="mailto:example@vista.com"
               className="content flex flex-col gap-3 items-center w-full bg-white shadow-xl border p-8 max-sm:p-8 rounded-3xl transition-all hover:-translate-y-3 hover:duration-300"
@@ -185,6 +153,11 @@ const Contact = () => {
           </div>
         </div>
         
+<Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.54646750331!2d-0.12209412309022351!3d51.50318971101055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2sin!4v1715881245440!5m2!1sen!2sin"
+  height="420px"
+  id=""
+  className=""
+  position="relative"/>
       </section>
 
       {/*--------------------------------------- Contact section End --------------------------------*/}

@@ -1,7 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
-const AeroButton = ({btnHref, className}) => {
+const ServicesBtn = ({btnHref, className}) => {
   const buttonClasses=`aeroBtn max-sm:flex max-sm:!justify-start ${className}`;
 
     return (
@@ -12,5 +12,8 @@ const AeroButton = ({btnHref, className}) => {
         </Link>
     )
 }
-
-export default AeroButton
+ServicesBtn.propTypes = {
+    btnHref: PropTypes.string.isRequired,
+    className: PropTypes.string,
+  };
+export default ServicesBtn

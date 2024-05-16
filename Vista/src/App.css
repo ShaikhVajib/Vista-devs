@@ -127,6 +127,14 @@ p{
     transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 }
 /* END */
+/* Scroll To next button Css */
+.scroll-con img{   
+    transition: all .4s cubic-bezier(.47,1.64,.41,.8) !important;
+}
+.scroll-con:hover img{
+    opacity: 0.6;
+}
+/* END */
 
 /* reponsive code boilerplate */
 

@@ -17,7 +17,7 @@ const Cta = () => {
           </div>
           <SecondaryButton
             className="!bg-black"
-            btnHref="#contact"
+            btnHref="/contact"
             btnText="Contact Us"
           />
         </section>

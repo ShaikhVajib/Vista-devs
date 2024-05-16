@@ -2,30 +2,10 @@ import "./Services.css";
 import ServicesComponent from "../../Components/Services/ServicesComponent";
 import Cta from "../../Components/Cta";
 import Breadcrumbs from "../../Components/Breadcrumbs";
-import Scroll from "../../assets/Icons/scroll-obj.svg";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import AeroButton from "../../Components/Buttons/AeroButton";
-import { useEffect } from "react";
+import ArrowButton from "../../Components/Buttons/ArrowButton";
+
 
 const Services = () => {
-  // Next Section Smooth Scroll
-  const scrollToNextSection = () => {
-    scroll.scrollTo(window.innerHeight);
-  };
-  // Scroll Icon Animation
-  useEffect(() => {
-    const scrollIcon = document.getElementById("scroll-icon");
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop;
-      scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -42,21 +22,9 @@ const Services = () => {
               <p className="text-gray-500  justify-center mb-10 max-sm:mb-5 w-1/3 lg:w-2/6 max-sm:w-full max-sm:text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, voluptas. 
           </p>
-              <ScrollLink
-                to="nxt-section"
-                smooth={true}
-                duration={1000}
-                onClick={scrollToNextSection}
-                className="scroll-con"
-              >
-                <img
-                  src={Scroll}
-                  width="100px"
-                  className="cursor-pointer"
-                  id="scroll-icon"
-                />
-                <AeroButton className="scroll-link-aero rotate-90 ml-11 mt-4" />
-              </ScrollLink>
+          <ArrowButton scrollTo="nxt-section" />
+
+
 
             </div>
           </div>

@@ -28,9 +28,9 @@ function Header() {
 
       <nav className="fixed w-full order-gray-200 top-0 z-50 bg-transparent">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${scrolling ? 'bg-primary py-2 px-5 rounded-full shadow-lg' : 'bg-transparent' } `}>
+          <NavLink to="/" className={`flex items-center space-x-3 rtl:space-x-reverse ${scrolling ? 'bg-primary py-2 px-5 rounded-full shadow-lg' : 'bg-transparent' } `}>
               <img src={logo} className="h-8 header-logo " alt="Logo" />
-          </a>
+          </NavLink>
         
           {/* Mobile Menu */}
           <label

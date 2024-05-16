@@ -3,30 +3,11 @@ import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import Cta from "../../Components/Cta";
 import Servicescomp from "../../Components/Services/ServicesComponent";
-import AeroButton from "../../Components/Buttons/AeroButton";
-import Scroll from "../../assets/Icons/scroll-obj.svg";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { useEffect } from "react";
+import ArrowButton from "../../Components/Buttons/ArrowButton";
+import ServicesBtn from "../../Components/Buttons/ServicesBtn";
 
 const Home = () => {
-    // Next Section Smooth Scroll
-    const scrollToNextSection = () => {
-      scroll.scrollTo(window.innerHeight);
-    };
-    // Scroll Icon Animation
-    useEffect(() => {
-      const scrollIcon = document.getElementById("scroll-icon");
-      const handleScroll = () => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const rotationAngle = scrollTop;
-        scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+
   
   return (
     <>
@@ -56,30 +37,17 @@ const Home = () => {
                   className="!bg-gray-900"
                 />
               </div>
-              <ScrollLink
-                to="nxt-section"
-                smooth={true}
-                duration={1000}
-                onClick={scrollToNextSection}
-                className="scroll-con justify-center mt-10 -mb-20 max-sm:mb-0 max-sm:mt-0"
-              >
-                <img
-                  src={Scroll}
-                  width="100px"
-                  className="cursor-pointer"
-                  id="scroll-icon"
-                />
-                <div className="flex flex-row justify-center items-center gap-5 max-sm:flex-col max-sm:justify-center">
-                <AeroButton className="scroll-link-aero rotate-90 ml-7 mt-4" />
-                </div>
-              </ScrollLink>
+              <div className="flex justify-center mt-8 max-sm:mb-28 max-sm:mt-4">
+              <ArrowButton scrollTo="nxt-section" />
+              </div>
+
             </div>
           </div>
         </div>
         {/*--------------------------------------- Hero section End --------------------------------*/}
 
         {/*--------------------------------------- About section Start --------------------------------*/}
-        <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14 bg-white">
+        <div className="about-section section flex max-w-screen-xl m-auto py-28 gap-12 max-sm:flex-col-reverse max-sm:py-14 bg-white" id="nxt-section">
           {/* left side content section  */}
           <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
             <h2 className="leading-tight text-black big-heading">
@@ -137,7 +105,7 @@ const Home = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Quam inventore quis ullam.
                     </p>
-                    <AeroButton btnHref="/services" />
+                    <ServicesBtn btnHref="/services"/>
                   </div>
                   <div className="content-box py-14 px-5 text-white">
                     <h3 className="mb-5">Data 2</h3>
@@ -145,7 +113,8 @@ const Home = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Quam inventore quis ullam.
                     </p>
-                    <AeroButton btnHref="/services" />
+                    <ServicesBtn btnHref="/services"/>
+
                   </div>
                   <div className="content-box py-14 px-5 text-white">
                     <h3 className="mb-5">Data 3</h3>
@@ -153,7 +122,8 @@ const Home = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Quam inventore quis ullam.
                     </p>
-                    <AeroButton btnHref="/services" />
+                    <ServicesBtn btnHref="/services"/>
+
                   </div>
                   <div className="content-box py-14 px-5 text-white">
                     <h3 className="mb-5">Data 4</h3>
@@ -161,7 +131,8 @@ const Home = () => {
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                       Quam inventore quis ullam.
                     </p>
-                    <AeroButton btnHref="/services" />
+                    <ServicesBtn btnHref="/services"/>
+
                   </div>
                 </div>
               </div>
