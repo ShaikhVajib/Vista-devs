@@ -6,6 +6,7 @@ import AeroButton from "../../Components/Buttons/AeroButton";
 import Envelop from "../../assets/Icons/envelop-outline.svg";
 import Phone from "../../assets/Icons/phone-outline.svg";
 import Marker from "../../assets/Icons/marker-outline.svg";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   // Next Section Smooth Scroll
@@ -18,7 +19,7 @@ const Contact = () => {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop;
+      const rotationAngle = scrollTop / 2;
       scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
     };
     window.addEventListener("scroll", handleScroll);
@@ -26,23 +27,24 @@ const Contact = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  //Form Fields
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
+  const navigate = useNavigate();//Navigator
+  //Submit Method 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Form submitted:", { name, email, phone, message });
+    console.log("Form submitted:", { name, email, phone, message });
     const formData = { name, email, phone, message };
     localStorage.setItem("formData", JSON.stringify(formData));
     setName("");
     setEmail("");
     setPhone("");
     setMessage("");
+    navigate("/thank-you");//Navigate to Thank You Page
   };
-
   return (
     <>
       {/*--------------------------------------- Contact hero section Start --------------------------------*/}
@@ -81,13 +83,16 @@ const Contact = () => {
 
       {/*--------------------------------------- Contact section Start --------------------------------*/}
       <section className="bg-white contact-main-section">
-      <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Zespires+(Zespires%20Technology)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps vehicle tracker</a></iframe>
         <div className="nxt-section content-section py-40 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-row justify-center gap-10 max-sm:flex-col max-sm:py-12 max-sm:px-5 max-lg:flex-col">
           <div className="content flex flex-col gap-8 justify-center max-sm:items-center w-3/4 pr-10 rounded-3xl max-sm:w-full max-lg:w-full ">
             <h2 className="font-semibold text-4xl pb-5 text-black">
-            Let's<span className="text-light">Talk</span>  
+              Let's<span className="text-light">Talk</span>
             </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-7 text-black text-xl w-full mt-5">
+            {/* Contact Form */}
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-7 text-black text-xl w-full mt-5"
+            >
               <div className="mb-4">
                 <input
                   type="text"
@@ -99,29 +104,29 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-row gap-5 w-full max-sm:flex-col">
-              <div className="mb-4 w-full">
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  placeholder="Your Mail"
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
-                />
+                <div className="mb-4 w-full">
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    placeholder="Your Mail"
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
+                  />
+                </div>
+                <div className="mb-4 w-full">
+                  <input
+                    type="number"
+                    id="phone"
+                    value={phone}
+                    placeholder="Your Phone"
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
+                  />
+                </div>
               </div>
-              <div className="mb-4 w-full">
-                <input
-                  type="number"
-                  id="phone"
-                  value={phone}
-                  placeholder="Your Phone"
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
-                />
-              </div>
-              </div>
-              
-              <div className="mb-4">  
+
+              <div className="mb-4">
                 <textarea
                   id="message"
                   value={message}
@@ -146,6 +151,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
+          {/* Side Containers */}
           <div className="content flex flex-col gap-8 max-sm:items-center w-1/4 max-sm:w-full max-lg:w-full">
             <a
               href="mailto:example@vista.com"
@@ -162,10 +168,7 @@ const Contact = () => {
               href="tel:+91 9724034277"
               className="content flex flex-col gap-3 items-center w-full bg-white shadow-xl border p-8 max-sm:p-8 rounded-3xl transition-all hover:-translate-y-3 hover:duration-300"
             >
-              <img
-                src={Phone}
-                className="h-10 service-card-icon self-center"
-              />
+              <img src={Phone} className="h-10 service-card-icon self-center" />
               <h3>Phone</h3>
               <p>+91 9725059703</p>
             </a>
@@ -178,13 +181,18 @@ const Contact = () => {
                 className="h-10  service-card-icon self-center"
               />
               <h3>Address</h3>
-              <p className="text-center">
-                Lorem ipsum is dummy text, 007
-              </p>
+              <p className="text-center">Lorem ipsum is dummy text, 007</p>
             </a>
           </div>
         </div>
-        
+        {/* Map */}
+        <iframe
+          width="100%"
+          height="500"
+          src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=Zespires+(Zespires%20Technology)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        >
+          <a href="https://www.gps.ie/">gps vehicle tracker</a>
+        </iframe>
       </section>
 
       {/*--------------------------------------- Contact section End --------------------------------*/}

@@ -18,7 +18,7 @@ const Services = () => {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop;
+      const rotationAngle = scrollTop / 2;
       scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
     };
     window.addEventListener("scroll", handleScroll);

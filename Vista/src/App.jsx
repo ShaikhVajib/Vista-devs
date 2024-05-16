@@ -8,6 +8,7 @@ import Services from "./Pages/Services/Services.jsx";
 import About from "./Pages/About/About.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ThankYou from "./Pages/ThankYou.jsx";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="thank-you" element={<ThankYou />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
