@@ -43,7 +43,7 @@ const Contact = () => {
     setEmail("");
     setPhone("");
     setMessage("");
-    navigate("/thank-you");//Navigate to Thank You Page
+    navigate("/thank-you", { state: { name } });
   };
   return (
     <>
