@@ -13,10 +13,10 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
+  //Submit Method 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("Form submitted:", { name, email, phone, message });
+    console.log("Form submitted:", { name, email, phone, message });
     const formData = { name, email, phone, message };
     localStorage.setItem("formData", JSON.stringify(formData));
     setName("");
@@ -24,7 +24,6 @@ const Contact = () => {
     setPhone("");
     setMessage("");
   };
-
   return (
     <>
       {/*--------------------------------------- Contact hero section Start --------------------------------*/}
@@ -55,7 +54,11 @@ const Contact = () => {
             <h2 className="font-semibold text-4xl pb-5 text-black">
             Let`s<span className="text-light">Talk</span>  
             </h2>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-7 text-black text-xl w-full mt-5">
+            {/* Contact Form */}
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-7 text-black text-xl w-full mt-5"
+            >
               <div className="mb-4">
                 <input
                   type="text"
@@ -67,29 +70,29 @@ const Contact = () => {
                 />
               </div>
               <div className="flex flex-row gap-5 w-full max-sm:flex-col">
-              <div className="mb-4 w-full">
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  placeholder="Your Mail"
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
-                />
+                <div className="mb-4 w-full">
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    placeholder="Your Mail"
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
+                  />
+                </div>
+                <div className="mb-4 w-full">
+                  <input
+                    type="number"
+                    id="phone"
+                    value={phone}
+                    placeholder="Your Phone"
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
+                  />
+                </div>
               </div>
-              <div className="mb-4 w-full">
-                <input
-                  type="number"
-                  id="phone"
-                  value={phone}
-                  placeholder="Your Phone"
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
-                />
-              </div>
-              </div>
-              
-              <div className="mb-4">  
+
+              <div className="mb-4">
                 <textarea
                   id="message"
                   value={message}
@@ -130,10 +133,7 @@ const Contact = () => {
               href="tel:+91 9724034277"
               className="content flex flex-col gap-3 items-center w-full bg-white shadow-xl border p-8 max-sm:p-8 rounded-3xl transition-all hover:-translate-y-3 hover:duration-300"
             >
-              <img
-                src={Phone}
-                className="h-10 service-card-icon self-center"
-              />
+              <img src={Phone} className="h-10 service-card-icon self-center" />
               <h3>Phone</h3>
               <p>+91 9725059703</p>
             </a>
@@ -146,9 +146,7 @@ const Contact = () => {
                 className="h-10  service-card-icon self-center"
               />
               <h3>Address</h3>
-              <p className="text-center">
-                Lorem ipsum is dummy text, 007
-              </p>
+              <p className="text-center">Lorem ipsum is dummy text, 007</p>
             </a>
           </div>
         </div>

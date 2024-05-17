@@ -7,7 +7,6 @@ import ArrowButton from "../../Components/Buttons/ArrowButton";
 import ServicesBtn from "../../Components/Buttons/ServicesBtn";
 
 const Home = () => {
-
   
   return (
     <>
