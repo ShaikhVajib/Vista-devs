@@ -5,7 +5,7 @@ import Phone from "../../assets/Icons/phone-outline.svg";
 import Marker from "../../assets/Icons/marker-outline.svg";
 import Iframe from 'react-iframe'
 import ArrowButton from "../../Components/Buttons/ArrowButton";
-
+import { useNavigate } from "react-router-dom"; 
 
 const Contact = () => {
 
@@ -13,6 +13,7 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();//Navigator
   //Submit Method 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +24,7 @@ const Contact = () => {
     setEmail("");
     setPhone("");
     setMessage("");
+    navigate("/thank-you", { state: { name } });
   };
   return (
     <>

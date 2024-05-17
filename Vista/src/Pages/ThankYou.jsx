@@ -1,4 +1,4 @@
-import React from 'react'
+
 import PrimaryButton from "../Components/Buttons/PrimaryButton";
 import Tyimg from "../assets/Images/Thank-You-Illustration.png";
 import { useLocation } from 'react-router-dom';
@@ -15,7 +15,7 @@ function ThankYou() {
           src={Tyimg}
           alt="Error 404"
         />
-        <h1 className="text-white text-4xl text-center max-sm:text-3xl">
+        <h1 className="text-white text-4xl text-center max-sm:text-3xl" >
         <span className='text-primary'>{name}</span> <br/>Thank You for Reaching Out!
         </h1>
         <p className="text-gray-500 text-center pb-5 w-1/3 max-sm:w-full">

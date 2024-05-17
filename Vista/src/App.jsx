@@ -9,6 +9,7 @@ import About from "./Pages/About/About.jsx";
 import PageNotFound from "./Pages/PageNotFound.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ThankYou from "./Pages/ThankYou.jsx";
+import ScrollToTop from "./Components/ScrollToTop.jsx";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <Router  >
-      <ScrollToTop />
+      <ScrollToTop/>
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Routes>
           <Route index element={<Home />} />
