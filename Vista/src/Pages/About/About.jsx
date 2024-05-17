@@ -1,6 +1,7 @@
 import Breadcrumbs from "../../Components/Breadcrumbs";
-import SecondaryButton from "../../Components/Buttons/SecondaryButton";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
+import Cta from "../../Components/Cta";
+import ServicesBtn from "../../Components/Buttons/ServicesBtn";
 
 const About = () => {
   
@@ -31,8 +32,7 @@ const About = () => {
           {/* left side content section  */}
           <div className="content-section w-1/2 pr-20 max-sm:w-full max-sm:pr-0">
             <h2 className="leading-tight text-black big-heading">
-              Lorem ipsum <br />
-              <span className="text-light">dolor sit amet.</span>
+             <span className="text-light">The Story of </span>Vista
             </h2>
             <p className="mt-5">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
@@ -48,8 +48,13 @@ const About = () => {
               eum corporis porro consectetur quaerat eius labore officiis
               placeat beatae sequi voluptas, aperiam quas! Fuga, aliquam!
             </p>
+            <p className="mt-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              eum corporis porro consectetur quaerat eius labore officiis
+              placeat beatae sequi voluptas, aperiam quas! Fuga, aliquam!
+            </p>
             <div className="flex mt-8  gap-5 max-sm:flex-col-reverse max-sm:justify-center max-sm:mt-6">
-              <SecondaryButton btnHref="/about" btnText="About Us" />
+             
             </div>
           </div>
           {/* right Side Image section */}
@@ -62,7 +67,69 @@ const About = () => {
           </div>
         </div>
         {/*--------------------------------------- About section End --------------------------------*/}
+        {/*--------------------------------------- Grid section Start --------------------------------*/}
 
+        <div className="why-choose-section">
+          <div className="bg-black flex ">
+            <div className="content-section py-32 px-5 max-w-screen-xl mx-auto content-end flex flex-col gap-6 flex-nowrap justify-center max-sm:py-12 max-sm:px-5">
+              <div className="content flex flex-col gap-8">
+                <h2 className="text-white text-5xl text-center max-sm:text-4xl big-heading">
+                Our Projects
+                </h2>
+                <p className="text-gray-500  justify-center text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div className="mt-16 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+                  <div className="content-box py-14 px-5 text-white">
+                    <h3 className="mb-5">Data 1</h3>
+                    <p className="text-gray-500">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quam inventore quis ullam.
+                    </p>
+                    <ServicesBtn btnHref="/services"/>
+                  </div>
+                  <div className="content-box py-14 px-5 text-white">
+                    <h3 className="mb-5">Data 2</h3>
+                    <p className="text-gray-500">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quam inventore quis ullam.
+                    </p>
+                    <ServicesBtn btnHref="/services"/>
+
+                  </div>
+                  <div className="content-box py-14 px-5 text-white">
+                    <h3 className="mb-5">Data 3</h3>
+                    <p className="text-gray-500">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quam inventore quis ullam.
+                    </p>
+                    <ServicesBtn btnHref="/services"/>
+
+                  </div>
+                  <div className="content-box py-14 px-5 text-white">
+                    <h3 className="mb-5">Data 4</h3>
+                    <p className="text-gray-500">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Quam inventore quis ullam.
+                    </p>
+                    <ServicesBtn btnHref="/services"/>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*--------------------------------------- Grid section End --------------------------------*/}
+
+        {/*--------------------------------------- Cta Section Start --------------------------------*/}
+        <div className="cta-section">
+          <Cta />
+        </div>
+        {/*--------------------------------------- Cta Section End --------------------------------*/}
     </>
   );
 };

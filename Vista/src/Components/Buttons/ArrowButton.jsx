@@ -8,7 +8,7 @@ const ArrowButton = ({ scrollTo }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const rotationAngle = scrollTop * 0.3; // Adjust the multiplier to control rotation speed
+      const rotationAngle = scrollTop * 0.3; 
       const scrollIcon = document.getElementById("scroll-icon");
       if (scrollIcon) {
         scrollIcon.style.transform = `rotate(${rotationAngle}deg)`;
