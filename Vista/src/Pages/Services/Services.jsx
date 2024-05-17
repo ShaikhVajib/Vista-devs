@@ -36,7 +36,7 @@ const Services = () => {
       <section className="services-grid" id="nxt-section">
         <div className="max-w-screen-xl section m-auto pt-20 py-64  max-sm:pt-10 max-sm:pb-60">
           <h2 className="text-black text-5xl  max-sm:text-4xl big-heading mb-5 max-sm:mb-4">
-            Our Services
+          What We Offer
           </h2>
           <p className="text-gray-500  justify-center mb-10 max-sm:mb-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
