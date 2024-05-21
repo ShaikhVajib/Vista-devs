@@ -15,9 +15,12 @@ function ThankYou() {
           src={Tyimg}
           alt="Error 404"
         />
+        <div className="flex w-3/6 flex-col items-center max-sm:w-full">
+        <span className='text-primary text-4xl mb-4'>{name}</span> 
         <h1 className="text-white text-4xl text-center max-sm:text-3xl" >
-        <span className='text-primary'>{name}</span> <br/>Thank You for Reaching Out!
+        Thank You for Reaching Out!
         </h1>
+        </div>
         <p className="text-gray-500 text-center pb-5 w-1/3 max-sm:w-full">
         We appreciate you taking the time to contact us. Your message has been successfully received
         </p>
