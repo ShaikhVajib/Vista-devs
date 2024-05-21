@@ -84,10 +84,11 @@ const Contact = () => {
                 </div>
                 <div className="mb-4 w-full">
                   <input
-                    type="number"
+                    type="tel"
                     id="phone"
                     value={phone}
                     placeholder="Your Phone"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     onChange={(e) => setPhone(e.target.value)}
                     className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
                   />
