@@ -1,6 +1,6 @@
 import '../../index.css';
 import './Footer.css';
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/MainLogo.png";
 import { NavLink } from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ function Footer() {
       <footer className="shadow">
         <div className="max-w-screen-xl flex flex-wrap gap-x-5 max-xl:gap-12 m-auto justify-between py-16 px-5">
           <div className="logo-section w-2/5 max-xl:w-2/5 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:text-center">
-            <img src={logo} className="h-8 header-logo mb-5 max-sm:justify-center" alt="Logo" />
+            <img src={logo} className="h-20 mb-5 max-sm:justify-center" alt="Logo" />
             <p className="text-white pr-20 max-xl:pr-0">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas et facere sed adipisci eos.
             </p>
@@ -57,7 +57,7 @@ function Footer() {
           <div className="contact-details-section w-1/4 max-xl:w-2/5 max-sm:text-center max-sm:w-full">
             <h3 className="text-white mb-3 text-3xl" >Get in touch</h3>
             <ul className='text-white'>
-              <li className='mb-3'>Location xyz...</li>
+              <li className='mb-3'>Location</li>
               <li> <NavLink to="tel:1234567890"> 12 3465 7890 </NavLink></li>
             </ul>
           </div>

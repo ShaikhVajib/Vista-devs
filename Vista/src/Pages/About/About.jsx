@@ -2,6 +2,10 @@ import Breadcrumbs from "../../Components/Breadcrumbs";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
 import Cta from "../../Components/Cta";
 import ServicesBtn from "../../Components/Buttons/ServicesBtn";
+import Member1 from './Team/vajib-shaikh.jpg';
+// import Member2 from './Team/spider.jpg';
+import Member3 from './Team/aditya-panchal.jpg';
+
 
 const About = () => {
   return (
@@ -81,38 +85,27 @@ const About = () => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <div className="mt-16 grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
-                <div className="content-box py-14 px-5 text-white">
-                  <h3 className="mb-5">Data 1</h3>
+              <div className="mt-16 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+                <div className="border border-slate-700 rounded-xl py-14 px-5 text-white hover:shadow-xl hover:shadow-slate-900 hover:-translate-y-5 transition-all duration-300">
+                  <h3 className="mb-5">Project 1</h3>
                   <p className="text-gray-500">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Quam inventore quis ullam.
                   </p>
-                  <ServicesBtn btnHref="/services" />
                 </div>
-                <div className="content-box py-14 px-5 text-white">
-                  <h3 className="mb-5">Data 2</h3>
+                <div className="border border-slate-700 rounded-xl py-14 px-5 text-white hover:shadow-xl hover:shadow-slate-900 hover:-translate-y-5 transition-all duration-300">
+                  <h3 className="mb-5">Project 2</h3>
                   <p className="text-gray-500">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Quam inventore quis ullam.
                   </p>
-                  <ServicesBtn btnHref="/services" />
                 </div>
-                <div className="content-box py-14 px-5 text-white">
-                  <h3 className="mb-5">Data 3</h3>
+                <div className="border border-slate-700 rounded-xl py-14 px-5 text-white hover:shadow-xl hover:shadow-slate-900 hover:-translate-y-5 transition-all duration-300">
+                  <h3 className="mb-5">Project 3</h3>
                   <p className="text-gray-500">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Quam inventore quis ullam.
                   </p>
-                  <ServicesBtn btnHref="/services" />
-                </div>
-                <div className="content-box py-14 px-5 text-white">
-                  <h3 className="mb-5">Data 4</h3>
-                  <p className="text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quam inventore quis ullam.
-                  </p>
-                  <ServicesBtn btnHref="/services" />
                 </div>
               </div>
             </div>
@@ -139,7 +132,7 @@ const About = () => {
               <div class="flex flex-col items-center p-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary shadow-xl">
                 <img
                   class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                  src={Member1}
                   alt=""
                 />
 
@@ -205,7 +198,7 @@ const About = () => {
               <div class="flex flex-col items-center p-8 transition-colors duration-300 transform border shadow-xl cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary">
                 <img
                   class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
-                  src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  src={Member3}
                   alt=""
                 />
 
