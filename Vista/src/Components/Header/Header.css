@@ -25,7 +25,8 @@ nav a{
     border: none;  
 }
 
-.main-menu a.active{
+.main-menu a.active,
+.mobile-menu a.active{
     background: var(--primary-color);
     border-radius: 50px;
     padding: 5px 20px;

@@ -3,9 +3,9 @@ import Breadcrumbs from "../../Components/Breadcrumbs";
 import Envelop from "../../assets/Icons/envelop-outline.svg";
 import Phone from "../../assets/Icons/phone-outline.svg";
 import Marker from "../../assets/Icons/marker-outline.svg";
-import Iframe from 'react-iframe'
+import Iframe from "react-iframe";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
 
@@ -13,8 +13,8 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();//Navigator
-  //Submit Method 
+  const navigate = useNavigate(); //Navigator
+  //Submit Method
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", { name, email, phone, message });
@@ -41,8 +41,7 @@ const Contact = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
                 voluptas.
               </p>
-              <ArrowButton scrollTo="nxt-section"/>
-
+              <ArrowButton scrollTo="nxt-section" />
             </div>
           </div>
         </div>
@@ -51,10 +50,13 @@ const Contact = () => {
 
       {/*--------------------------------------- Contact section Start --------------------------------*/}
       <section className="bg-white contact-main-section">
-        <div className="nxt-section content-section py-20 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-row justify-center gap-10 max-sm:flex-col max-sm:py-12 max-sm:px-5 max-lg:flex-col" id="nxt-section"> 
+        <div
+          className="nxt-section content-section py-20 px-5 max-w-screen-xl mx-auto content-end w-full flex flex-row justify-center gap-10 max-sm:flex-col max-sm:py-12 max-sm:px-5 max-lg:flex-col"
+          id="nxt-section"
+        >
           <div className="content flex flex-col gap-8 justify-center max-sm:items-center w-3/4 pr-10 rounded-3xl max-sm:w-full max-lg:w-full max-sm:mr-0 max-sm:pr-0 mr-16 ">
             <h2 className="font-semibold text-4xl pb-5 text-black">
-            Let`s<span className="text-light">Talk</span>  
+              Let`s<span className="text-light">Talk</span>
             </h2>
             {/* Contact Form */}
             <form
@@ -153,12 +155,14 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        
-<Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.54646750331!2d-0.12209412309022351!3d51.50318971101055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2sin!4v1715881245440!5m2!1sen!2sin"
-  height="420px"
-  id=""
-  className=""
-  position="relative"/>
+
+        <Iframe
+          url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.54646750331!2d-0.12209412309022351!3d51.50318971101055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2sin!4v1715881245440!5m2!1sen!2sin"
+          height="420px"
+          id=""
+          className=""
+          position="relative"
+        />
       </section>
 
       {/*--------------------------------------- Contact section End --------------------------------*/}

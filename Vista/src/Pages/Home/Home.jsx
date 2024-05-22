@@ -36,7 +36,7 @@ const Home = () => {
                   className="!bg-gray-900"
                 />
               </div>
-              <div className="flex justify-center mt-8 max-sm:mb-28 max-sm:mt-4">
+              <div className="flex justify-center mt-8 max-sm:mb-8 max-sm:mt-8">
               <ArrowButton scrollTo="nxt-section" />
               </div>
 
@@ -74,7 +74,7 @@ const Home = () => {
           {/* right Side Image section */}
           <div className="image-section w-1/2 max-sm:w-full">
             <img
-              src=".\src\assets\Images\Home page About img.jpg"
+              src=".\src\assets\Images\About.jpg"
               alt="CodeIsFun"
               className="about-img rounded-2xl shadow-2xl"
             />
