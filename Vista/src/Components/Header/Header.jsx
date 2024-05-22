@@ -62,7 +62,7 @@ function Header() {
               &nbsp;
             </div>
             <div className="fixed top-0 right-0 z-40 w-full -translate-y-full overflow-y-auto overscroll-y-none transition duration-500 peer-checked:translate-y-0">
-              <div className="float-right min-h-full w-[100%] bg-gray-900 px-6 rounded-br-2xl rounded-bl-2xl pt-24 pb-16 justify-center flex text-center shadow-2xl text-white">
+              <div className="float-right min-h-full w-[100%] bg-gray-950 px-6 rounded-br-2xl rounded-bl-2xl pt-24 pb-16 justify-center flex text-center shadow-2xl text-white">
                 <menu className="flex flex-col gap-4">
                   <li>
                     <NavLink

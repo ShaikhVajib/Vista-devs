@@ -1,7 +1,7 @@
 import Breadcrumbs from "../../Components/Breadcrumbs";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
 import Cta from "../../Components/Cta";
-import ServicesBtn from "../../Components/Buttons/ServicesBtn";
+import AboutImg from "../../assets/Images/About.jpg";
 import Member1 from "./Team/vajib-shaikh.jpg";
 import Member2 from "./Team/dipesh-nyka.jpg";
 import Member3 from "./Team/aditya-panchal.jpg";
@@ -22,7 +22,6 @@ const About = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
                 voluptas.
               </p>
-
               <ArrowButton scrollTo="nxt-section" />
             </div>
           </div>
@@ -62,7 +61,7 @@ const About = () => {
         {/* right Side Image section */}
         <div className="image-section w-1/2 max-sm:w-full">
           <img
-              src=".\src\assets\Images\About.jpg"
+              src={AboutImg}
               alt="CodeIsFun"
             className="about-img rounded-2xl shadow-2xl"
           />
@@ -206,7 +205,7 @@ const About = () => {
                 </h1>
 
                 <p className="mt-2 text-gray-500 capitalize  group-hover:text-gray-300">
-                  Junior designer
+                  Developer
                 </p>
 
                 <div className="flex mt-3 -mx-2">

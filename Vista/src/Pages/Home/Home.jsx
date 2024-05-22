@@ -1,6 +1,7 @@
 import "./Home.css";
 import PrimaryButton from "../../Components/Buttons/PrimaryButton";
 import SecondaryButton from "../../Components/Buttons/SecondaryButton";
+import AboutImg from "../../assets/Images/About.jpg";
 import Cta from "../../Components/Cta";
 import Servicescomp from "../../Components/Services/ServicesComponent";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
@@ -74,7 +75,7 @@ const Home = () => {
           {/* right Side Image section */}
           <div className="image-section w-1/2 max-sm:w-full">
             <img
-              src=".\src\assets\Images\About.jpg"
+              src={AboutImg}
               alt="CodeIsFun"
               className="about-img rounded-2xl shadow-2xl"
             />
