@@ -11,8 +11,8 @@ function Footer() {
     <>
       <footer className="shadow">
         <div className="max-w-screen-xl flex flex-wrap gap-x-5 max-xl:gap-12 m-auto justify-between py-16 px-5">
-          <div className="logo-section w-2/5 max-xl:w-2/5 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:text-center">
-            <img src={logo} className="h-20 mb-5 max-sm:justify-center" alt="Logo" />
+          <div className="logo-section w-2/5 max-xl:w-2/5 max-sm:items-center max-sm:w-full max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:text-center">
+            <img src={logo} className="h-20 mb-5 w-28 max-sm:justify-center" alt="Logo" />
             <p className="text-white pr-20 max-xl:pr-0">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas et facere sed adipisci eos.
             </p>

@@ -5,7 +5,7 @@ const Breadcrumbs = () => {
   const paths = pathname.split('/').filter((path) => path);
 
   return (
-    <div className="breadcrumbs uppercase text-sm tracking-widest text-white">
+    <div className="breadcrumbs uppercase text-sm w-full max-sm:text-center tracking-widest text-white">
       <Link to="/" className="hover:text-primary">Home</Link>
       {paths.map((path, index) => (
         <span key={index}>

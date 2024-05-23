@@ -1,6 +1,7 @@
 import Breadcrumbs from "../../Components/Breadcrumbs";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
 import Cta from "../../Components/Cta";
+import ServicesBtn from "../../Components/Buttons/ServicesBtn";
 import Member1 from './Team/vajib-shaikh.jpg';
 import Member2 from './Team/dipesh-nyka.jpg';
 import Member3 from './Team/aditya-panchal.jpg';
@@ -22,7 +23,6 @@ const About = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
                 voluptas.
               </p>
-
               <ArrowButton scrollTo="nxt-section" />
             </div>
           </div>
@@ -62,8 +62,8 @@ const About = () => {
         {/* right Side Image section */}
         <div className="image-section w-1/2 max-sm:w-full">
           <img
-            src=".\src\assets\Images\Home page About img.jpg"
-            alt="CodeIsFun"
+              src={AboutImg}
+              alt="CodeIsFun"
             className="about-img rounded-2xl shadow-2xl"
           />
         </div>
@@ -84,7 +84,7 @@ const About = () => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <div className="mt-16 grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+              <div className="mt-16 grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
                 <div className="border border-slate-700 rounded-xl py-14 px-5 text-white hover:shadow-xl hover:shadow-slate-900 hover:-translate-y-5 transition-all duration-300">
                   <h3 className="mb-5">Project 1</h3>
                   <p className="text-gray-500">
@@ -205,7 +205,7 @@ const About = () => {
                   Aditya Panchal
                 </h1>
 
-                <p className="mt-2 text-gray-500 capitalize  group-hover:text-gray-300">
+                <p class="mt-2 text-gray-500 capitalize  group-hover:text-gray-300">
                   Junior designer
                 </p>
 
