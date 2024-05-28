@@ -6,6 +6,8 @@ import Marker from "../../assets/Icons/marker-outline.svg";
 import Iframe from "react-iframe";
 import ArrowButton from "../../Components/Buttons/ArrowButton";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 const Contact = () => {
 
@@ -15,17 +17,21 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate(); //Navigator
   //Submit Method
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", { name, email, phone, message });
-    const formData = { name, email, phone, message };
-    localStorage.setItem("formData", JSON.stringify(formData));
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
-    navigate("/thank-you", { state: { name } });
-  };
+   const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = { name, email, phone, message };
+        try {
+            await axios.post('http://localhost:3000/api/forms', formData);
+            setName("");
+            setEmail("");
+            setPhone("");
+            setMessage("");
+            navigate("/thank-you", { state: { name } });
+        } catch (error) {
+            console.error('Something is happening but we dont know! Solve if you can', error);
+        }
+    };
+
   return (
     <>
       {/*--------------------------------------- Contact hero section Start --------------------------------*/}
@@ -90,7 +96,6 @@ const Contact = () => {
                     id="phone"
                     value={phone}
                     placeholder="Your Phone"
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     onChange={(e) => setPhone(e.target.value)}
                     className="px-3 py-4 border-gray-300 bg-transparent border-b text-sm uppercase w-full focus:border-primary focus:outline-0"
                   />
