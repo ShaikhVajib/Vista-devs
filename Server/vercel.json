@@ -1,27 +1,4 @@
 {
-<<<<<<< HEAD
-    "version": 3,
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "index.js"
-      }
-    ],
-    "functions": {
-      "api/index.js": {
-        "memory": 1024,
-        "maxDuration": 10
-      }
-    }
-  }
-      
-=======
   "version": 2,
   "builds": [
     {
@@ -36,4 +13,3 @@
     }
   ]
 }
->>>>>>> 66c4c4e00848d569048bf31eee4c14e25b2171f2
