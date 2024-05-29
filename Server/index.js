@@ -22,4 +22,8 @@ app.post('/api/forms', async (req, res) => {
 app.listen(3000, async () => {
     await connectDB();
     console.log('App is running..');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 882747de9b8e8a4c172b05744e0cc1fd6a28ee7a
