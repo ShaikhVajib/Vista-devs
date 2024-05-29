@@ -1,31 +1,25 @@
 const express = require('express');
-const mongoose = require('mongoose');
-
+const connectDB = require('./db.js');
+const Form = require('./models/Form');
+const Cors = require('cors');
 const app = express();
-const port = process.env.PORT || 3000;
 
-// Replace the following with your MongoDB Atlas connection string
-const mongoURI = 'mongodb+srv://vista:vista123@cluster0.0phhznf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+app.use(express.json());
+app.use(Cors());
 
-// Connect to MongoDB
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
+app.post('/api/forms', async (req, res) => {
+    try {
+        const { name, email, phone, message } = req.body;
+        const newForm = new Form({ name, email, phone, message });
+        await newForm.save();
+        res.status(201).send(newForm);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Server error');
+    }
 });
 
-// Connection success and error handling
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB Atlas');
-});
-
-// Basic route
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-// Start the Express server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(3000, async () => {
+    await connectDB();
+    console.log('App is running..');
 });
