@@ -28,7 +28,7 @@ const Contact = () => {
             setMessage("");
             navigate("/thank-you", { state: { name } });
         } catch (error) {
-            console.error('Something is happening but we dont know! Solve if you can', error);
+            console.error('Error!', error);
         }
     };
 
