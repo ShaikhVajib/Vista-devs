@@ -1,11 +1,11 @@
 const express = require('express');
 const connectDB = require('./db.js');
 const Form = require('./models/Form');
-const Cors = require('cors');
+const cors = require('cors');
 const app = express();
 
 app.use(express.json());
-app.use(Cors());
+app.use(cors()); // Use lowercase 'cors'
 
 app.post('/api/forms', async (req, res) => {
     try {
