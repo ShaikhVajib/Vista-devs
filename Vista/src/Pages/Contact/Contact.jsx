@@ -21,7 +21,7 @@ const Contact = () => {
         e.preventDefault();
         const formData = { name, email, phone, message };
         try {
-            await axios.post('http://localhost:3000/api/forms', formData);
+            await axios.post('https://vista-devs-server.vercel.app/api/forms', formData);
             setName("");
             setEmail("");
             setPhone("");
