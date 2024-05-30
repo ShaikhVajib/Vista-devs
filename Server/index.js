@@ -4,8 +4,14 @@ const Form = require('./models/Form');
 const cors = require('cors');
 const app = express();
 
+
+const corsOptions = {
+  origin: 'https://vista-flame.vercel.app', // Replace with your frontend URL
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
-app.use(cors()); // Use lowercase 'cors'
 
 app.post('/api/forms', async (req, res) => {
     try {
